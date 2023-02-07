@@ -342,6 +342,7 @@ header {
     height: 120px;
     padding: 12px 16px;
     margin-bottom: 20px;
+    margin-top: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -354,28 +355,54 @@ header {
 .form-textarea:focus {
     border: 1px solid var(--accent-color);
 }
-.checkbox {
+.form-textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    color: #757575;
+}
+.checkbox-label {
     display: flex;
-   
+    align-items: center;
     margin-bottom: 30px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: 20px;
+   
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-    color: #757575;
+    
+}
+
+.checkbox-input {
+    appearance: none;
+    
 }
 .checkbox-icon {
-    position: absolute;
-    top: -2px;
-    left: 0;
-    transform: translate(-50%);
+    border: #212121 solid 2px;
+    margin-right: 8px;
+    
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 16px;
     height: 15px;
+    
+}
+
+    
+
+.checkbox-input:checked + .checkbox-icon {
+    
+    background-color: #2196f3;
     border-radius: 2px;
+    border-color: #2196f3;
+    background-origin: border-box;
+
 }
 .checkbox-link {
     color: #2196f3;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    margin-left: 7px;
 }
 .form-button {
     display: block;
